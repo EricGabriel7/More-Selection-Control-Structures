@@ -1,0 +1,139 @@
+1.
+
+Input: Customer name, purchase amount, tax code
+
+Processing: Input tax code, purchase amount, customer name; Define sales tax = tax code % x purchase amount; 
+Define total amount due = purchase amount + sales tax; Print customer name, purchase amount, sales tax, total amount due.
+
+Output: Compute sales tax, total amount due; Print customer's name, purchase amount, sales tax, total amount due
+
+
+Set purchase amount to 0
+Tax code can be 0,1,2 or 3
+Set customer name to blank
+Sales tax = tax rate x purchase amount
+total amount due = sales tax + purchase amount
+
+IF purchase amount > 0
+	receive purchase amount
+	receive customer name	
+	receive tax code
+IF tax code =0
+	THEN tax rate = 0
+ELSE IF tax code =1
+	THEN tax rate = 0.03
+ELSE IF tax code =2
+	THEN tax rate = 0.05
+ELSE IF tax code =3
+	THEN tax rate = 0.07	
+	calculate sales tax
+	calculate total amount due
+	Print customer name
+	Print purchase amount
+	Print sales tax
+	Print total amount due
+ENDIF
+
+Test Data 1
+
+Input						Processing 					Output
+purchase amount = $3.11     sales tax = .03 x 3.11		= 0.09
+tax code = 1				total amount = .09 + 3.11	= 3.20
+customer name = Frank									Print customer name						
+														Print purchase amount								
+														Print sales tax
+														Print total amount due
+														
+Test Data 2
+
+Input						Processing 					Output
+purchase amount = $19.81    sales tax = .07 x 19.81		= 1.39
+tax code = 3				total amount = 1.39 + 19.81	= 21.2
+customer name = Cardiff									Print customer name						
+														Print purchase amount								
+														Print sales tax
+														Print total amount due
+
+
+														
+2.
+
+Input						Processing 					Output
+Employee's number    				
+Employee's pay rate			IF hours worked <= 35 AND 	Valid: Print weekly pay and input data
+Hours worked				pay rate <= 25;
+							Compute weekly pay: hours 
+							worked x hourly rate;
+							
+							ELSE IF 60 >= hours worked 	Valid: Print weekly pay and input data 							
+							> 35 AND pay rate <= 25;	
+							Compute standard pay:
+							(hours <= 35) x hourly rate;
+							Compute OT PAY: (60>= hours 
+							>= 35)x hourly rate x 1.5; 
+							Compute weekly pay: standard 
+							pay + OT pay;
+														Invalid: Print input data and error message
+
+
+Employee number is ______
+Employee's pay rate is a #
+Hours worked is a #
+
+IF hours worked <= 35 AND pay rate <= 25
+	THEN Receive employee #
+		 Receive hourly rate	
+		 Receive hours worked
+		 Validate hourly rate	
+		 Validate hours worked
+		 Compute weekly pay: hours worked x hourly rate
+		 Print weekly pay
+		 Print employee #
+		 Print hourly rate
+		 Print hours worked
+ELSE IF 60 >= hours worked > 35 AND pay rate <= 25
+	THEN Receive employee #
+		 Receive hourly rate	
+		 Receive hours worked
+		 Validate hourly rate	
+		 Validate hours worked
+		 Compute standard pay:(hours <= 35) x hourly rate;
+		 Compute OT PAY: (60>= hours>= 35)x hourly rate x 1.5; 
+		 Compute weekly pay: standard pay + OT pay;
+		 Print weekly pay
+		 Print employee #
+		 Print hourly rate
+		 Print hours worked
+	ELSE Print employee #
+		 Print weekly pay
+		 Print hourly rate
+		 Print message: ERROR: HOURLY RATE OR WEEKLY PAY OUT OF APPROPRIATE RANGE
+ENDIF
+
+Test Data 1
+
+Input						Processing 					Output
+Employee's number  1234  				
+Employee's pay rate  14		 						 	
+Hours worked		 62		Hours worked outside of 
+							maximum range
+							
+														Invalid: Print input data and error message
+
+Test Data 2
+														
+Input						Processing 					Output
+Employee's number   6666 				
+Employee's pay rate	  20	
+Hours worked		 34		Hours & weekly rate within 
+							range
+							Receive employee #
+							Receive hourly rate	
+							Receive hours worked
+							Validate hourly rate	
+							Validate hours worked
+							Compute weekly pay: hours 
+							worked x hourly rate
+														Valid: Print weekly pay and input data 							
+							
+														
